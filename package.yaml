@@ -58,8 +58,10 @@ dependencies:
   - lens
   - lifted-base
   - monad-control
+  - mtl
   - network
   - old-locale
+  - random
   - text
   - time
   - transformers-base

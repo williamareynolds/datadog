@@ -24,10 +24,10 @@ spec = describe "Event spec" $ do
           NormalPriority
     threadDelay 500000
     event1 <- createEvent env testDetails
-    threadDelay 20000000
+    threadDelay 190000000
     event2 <- loadEvent env (event1 ^. id')
-    threadDelay 500000
-    events <- loadEvents env (addUTCTime (-60) time, addUTCTime 60 time) Nothing []
+    threadDelay 190000000
+    events <- loadEvents env (addUTCTime (-30) time, addUTCTime 500 time) Nothing []
     when (event1 /= event2) $
       expectationFailure "Created and fetched events are not identical"
     when (event1 `notElem` events) $
